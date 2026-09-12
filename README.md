@@ -254,7 +254,7 @@ sequenceDiagram
     Note over B: App.jsx captures window.CONFIG at module<br/>top-level, then renders Dashboard
 
     Note over B,RD: User navigates away and back to Dashboard
-    Note over B: remote-config.js, remoteEntry.js, App-hash.js<br/>all cached - no network request; component<br/>module already captured its config earlier
+    Note over B: remote-config.js, remoteEntry.js, and App-hash.js<br/>all cached, no network request - component<br/>module already captured its config earlier
 ```
 
 Two requests fire before anything from `remote_dashboard`'s actual component
