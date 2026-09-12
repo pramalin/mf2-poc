@@ -249,12 +249,12 @@ sequenceDiagram
     else already loaded elsewhere
         Note over B: reuse existing shared instance
     end
-    B->>RD: GET App-<hash>.js (the actual page chunk)
+    B->>RD: GET App-hash.js (the actual page chunk)
     RD-->>B: App component code
     Note over B: App.jsx captures window.CONFIG at module<br/>top-level, then renders Dashboard
 
     Note over B,RD: User navigates away and back to Dashboard
-    Note over B: remote-config.js, remoteEntry.js, App-<hash>.js<br/>all cached - no network request; component<br/>module already captured its config earlier
+    Note over B: remote-config.js, remoteEntry.js, App-hash.js<br/>all cached - no network request; component<br/>module already captured its config earlier
 ```
 
 Two requests fire before anything from `remote_dashboard`'s actual component
